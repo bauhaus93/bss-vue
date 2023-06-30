@@ -1,0 +1,22 @@
+i.bi {
+  font-size: 4rem;
+  color: white;
+}
+
+a i.bi:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+a i.bi {
+  color: #9999fc;
+}
+
+hr {
+  border-top: 2px solid white;
+}
+
+body {
+  color: white;
+  background-color: #8f5dbc;
+}

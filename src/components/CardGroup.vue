@@ -1,0 +1,22 @@
+<script setup>
+defineProps(['card_contents']);
+
+</script>
+
+<template>
+  <div class="row">
+    <div class="col-lg my-2"
+         v-for="content in card_contents"
+        :key="content">
+      <div class="card w-100 h-100 rounded-3" >
+
+        <img :src="'/img/' + content.img" class="card-img-top rounded-top-3" :alt="content.img_alt"/>
+
+        <div class="card-body">
+          <h5 class="card-title">{{ content.title }}</h5>
+          <p class="card-text">{{ content.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
