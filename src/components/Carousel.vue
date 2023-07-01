@@ -72,7 +72,7 @@ function interact() {
 
 <style>
 img {
-  max-height: 35rem;
+  max-height: 20rem;
   width: auto;
 }
 </style>
