@@ -2,6 +2,10 @@
 import Carousel from './components/Carousel.vue'
 import CardGroup from './components/CardGroup.vue'
 
+
+const next_event_date = new Date("2023-07-30");
+const images_last_event = Array(9).fill().map((e, i) => "last/0" + (i + 1) + ".jpg");
+
 const card_contents = [
     { img: 'regal.jpg',
       img_alt: 'Ein Regal voller Spiele',
@@ -17,11 +21,25 @@ const card_contents = [
       text: 'Wir möchten für BrettspielerInnen in Graz einen Ort schaffen, an dem sie zahlreiche Spiele ausprobieren und eine Community formen können'},
 ];
 
-const images_last_event = [1, 2, 3, 4].map(e => "last/0" + e + ".jpg");
+const date_normal = `${next_event_date.getDate()}.${next_event_date.getMonth() + 1}.${next_event_date.getFullYear()}`;
+const date_compact = `${next_event_date.getFullYear()}${(next_event_date.getMonth() + 1).toString().padStart(2, "0")}${next_event_date.getDate().toString().padStart(2, "0")}`;
+
+const ics = btoa(`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Brettspielsonntag///NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:bss_${date_compact}
+DTSTART:${date_compact}T090000Z
+DTEND:${date_compact}T180000Z
+SUMMARY:Brettspielsonntag
+GEO:47.07441096852008;15.419093892451908
+LOCATION: Ghegagasse 29\\, 8020 Graz
+END:VEVENT
+END:VCALENDAR`);
 
 </script>
 <template>
-  <div class="container-sm mx-auto mt-4 text-center">
+  <div class="container-sm mx-auto mt-4 text-center bg-body">
 
     <div class="row">
       <div class="col">
@@ -41,8 +59,8 @@ const images_last_event = [1, 2, 3, 4].map(e => "last/0" + e + ".jpg");
     </div>
     <div class="row">
       <div class="col-sm">
-        <a href="/next_event.ics"><i class="bi bi-calendar2-event"></i></a>
-        <p class="fw-bold">30.07.2023</p>
+        <a :href="'data:text/calendar;base64,' + ics" download="brettspielsonntag.ics"><i class="bi bi-calendar2-event"></i></a>
+        <p class="fw-bold">{{ date_normal }}</p>
         <p>11:00-20:00</p>
       </div>
       <div class="col-sm">
@@ -64,8 +82,9 @@ const images_last_event = [1, 2, 3, 4].map(e => "last/0" + e + ".jpg");
 
     </div>
 
-    <div class="row mt-4">
+    <div class="row mt-5">
       <div class="col">
+        <h2>Eindrücke vom letzten Event</h2>
         <Carousel id="carousel_last_event"
           :image_paths="images_last_event"/>
       </div>
@@ -131,7 +150,7 @@ const images_last_event = [1, 2, 3, 4].map(e => "last/0" + e + ".jpg");
     </div>
   </div>
 
-  <div class="row mt-4">
+  <div class="row">
     <div class="col">
       <a href="mailto:brettspielsonntag@gmail.com"><i class="bi bi-envelope-at-fill"></i></a>
     </div>

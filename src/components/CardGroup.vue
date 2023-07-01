@@ -12,7 +12,7 @@ defineProps(['card_contents']);
 
         <img :src="'/img/' + content.img" class="card-img-top rounded-top-3" :alt="content.img_alt"/>
 
-        <div class="card-body">
+        <div class="card-body bg-white text-black rounded-bottom-3">
           <h5 class="card-title">{{ content.title }}</h5>
           <p class="card-text">{{ content.text }}</p>
         </div>
