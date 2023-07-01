@@ -10,7 +10,14 @@ const routes = {
 
 const nav_items = [
   { title: "Hauptseite", link: "#/" },
-  { title: "Vergangene Events", link: "#/events/previous" },
+  {
+    title: "Vergangene Events",
+    items: [
+      { title: "01.01.0111", link: "#/prev/01" },
+      { title: "02.01.0111", link: "#/prev/02" },
+      { title: "03.01.0111", link: "#/prev/03" },
+    ],
+  },
 ];
 
 const curr_path = ref(window.location.hash);
