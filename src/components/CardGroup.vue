@@ -10,9 +10,9 @@ defineProps(['card_contents']);
         :key="content">
       <div class="card w-100 h-100 rounded-3" >
 
-        <img :src="'/img/' + content.img" class="card-img-top rounded-top-3" :alt="content.img_alt"/>
+        <img loading="lazy" :src="'/img/' + content.img" class="card-img-top rounded-top-3" :alt="content.img_alt"/>
 
-        <div class="card-body bg-white text-black rounded-bottom-3">
+        <div class="card-body bg-white text-black text-start rounded-bottom-3">
           <h5 class="card-title">{{ content.title }}</h5>
           <p class="card-text">{{ content.text }}</p>
         </div>

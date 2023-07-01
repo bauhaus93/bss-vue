@@ -9,9 +9,14 @@ a i.bi:hover {
 }
 
 a i.bi {
-  color: #9999fc;
+  color: #c9f3fc;
 }
 
 hr {
   border-top: 2px solid white;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 4rem;
 }
