@@ -41,6 +41,7 @@ function interact() {
         :class="{ active: i == 0 }"
       >
         <img
+          class="w-100"
           :loading="loading_type"
           :src="'/img/' + img_path"
           :alt="'Nice Slide #' + i"
@@ -71,8 +72,6 @@ function interact() {
 </template>
 
 <style>
-img {
-  max-height: 20rem;
-  width: auto;
+.carousel img {
 }
 </style>

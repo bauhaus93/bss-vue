@@ -1,0 +1,13 @@
+$slide_offset: 150px;
+
+.slide-in {
+  position: relative;
+  transform: translateY($slide_offset);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.slide-in.visible {
+  transform: translateY(0);
+  opacity: 1;
+}

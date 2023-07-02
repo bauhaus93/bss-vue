@@ -3,9 +3,9 @@ defineProps(["card_contents"]);
 </script>
 
 <template>
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-lg my-2" v-for="content in card_contents" :key="content">
-      <div class="card w-100 h-100 rounded-3">
+      <div class="card h-100 rounded-3">
         <img
           loading="lazy"
           :src="'/img/' + content.img"
@@ -21,3 +21,10 @@ defineProps(["card_contents"]);
     </div>
   </div>
 </template>
+
+<style>
+.card img {
+  width: 100%;
+  max-height: auto;
+}
+</style>

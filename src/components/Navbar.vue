@@ -1,5 +1,7 @@
 <script setup>
-defineProps(["items"]);
+import { reactive, computed } from "vue";
+
+defineProps(["items", "sticky"]);
 
 let dropdown_id = 0;
 
@@ -10,10 +12,14 @@ function next_dropdown_id() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md bg-dark">
+  <nav
+    class="navbar navbar-expand-md bg-dark navbar-dark"
+    :class="{ 'sticky-top': sticky == '1' }"
+  >
     <div class="container-fluid">
       <a class="navbar-brand" href="#/"><img src="/favicon.ico" /></a>
       <button
+        id="navbar_toggler"
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -33,30 +39,26 @@ function next_dropdown_id() {
             class="nav-item"
             :class="{ dropdown: item.items }"
           >
-            <a
-              v-if="item.link"
-              class="nav-link"
-              aria-current="page"
-              :href="item.link"
-              >{{ item.title }}</a
-            >
+            <router-link v-if="item.link" class="nav-link" :to="item.link">{{
+              item.title
+            }}</router-link>
 
             <span v-if="item.items">
-              <a
+              <router-link
                 class="nav-link dropdown-toggle"
-                href="#"
+                to="#"
                 :id="next_dropdown_id()"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 {{ item.title }}
-              </a>
+              </router-link>
               <ul class="dropdown-menu bg-dark" :aria-labelledby="dropdown_id">
                 <li v-for="sub_item in item.items" :key="sub_item">
-                  <a class="dropdown-item" :href="sub_item.link">{{
+                  <router-link class="dropdown-item" :to="sub_item.link">{{
                     sub_item.title
-                  }}</a>
+                  }}</router-link>
                 </li>
               </ul>
             </span>
@@ -66,9 +68,3 @@ function next_dropdown_id() {
     </div>
   </nav>
 </template>
-
-<style>
-#navbar_content ul a.nav-link {
-  color: white;
-}
-</style>
