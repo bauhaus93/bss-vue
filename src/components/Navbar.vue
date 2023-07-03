@@ -17,7 +17,9 @@ function next_dropdown_id() {
     :class="{ 'sticky-top': sticky == '1' }"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#/"><img src="/favicon.ico" /></a>
+      <router-link class="navbar-brand" href="#/"
+        ><img src="/favicon.ico"
+      /></router-link>
       <button
         id="navbar_toggler"
         class="navbar-toggler"
