@@ -17,7 +17,7 @@ function next_dropdown_id() {
     :class="{ 'sticky-top': sticky == '1' }"
   >
     <div class="container-fluid">
-      <router-link class="navbar-brand" href="#/"
+      <router-link class="navbar-brand" to="/"
         ><img src="/favicon.ico"
       /></router-link>
       <button
