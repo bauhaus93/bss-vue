@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, computed } from "vue";
 
-defineProps(["items", "sticky"]);
+defineProps(["title", "items", "sticky"]);
 
 let dropdown_id = 0;
 
@@ -18,8 +18,11 @@ function next_dropdown_id() {
   >
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/"
-        ><img src="/favicon.ico"
-      /></router-link>
+        ><img src="/favicon.ico" /><span id="title" class="px-2 fw-bold">{{
+          title
+        }}</span></router-link
+      >
+
       <button
         id="navbar_toggler"
         class="navbar-toggler"
@@ -34,7 +37,7 @@ function next_dropdown_id() {
       </button>
 
       <div class="collapse navbar-collapse" id="navbar_content">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto">
           <li
             v-for="item in items"
             :key="item"

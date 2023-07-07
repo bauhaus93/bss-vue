@@ -1,3 +1,11 @@
+<template>
+  <Navbar :items="nav_items" title="Brettspielsonntag" sticky="1" />
+
+  <div class="container-sm mx-auto mt-4 text-center bg-body">
+    <router-view> </router-view>
+  </div>
+</template>
+
 <script setup>
 import { watch } from "vue";
 import { useRoute } from "vue-router";
@@ -5,7 +13,6 @@ import { useRoute } from "vue-router";
 import Navbar from "./components/Navbar.vue";
 
 const nav_items = [
-  { title: "Brettspielsonntag", link: "/" },
   { title: "Spieleliste", link: "/list" },
   { title: "Spiel des Monats", link: "/monthly-favourite" },
   {
@@ -28,13 +35,6 @@ watch(
 );
 </script>
 
-<template>
-  <Navbar :items="nav_items" sticky="1" />
-
-  <div class="container-sm mx-auto mt-4 text-center bg-body">
-    <router-view> </router-view>
-  </div>
-</template>
 <script>
 addEventListener("DOMContentLoaded", (event) => {
   register_scroll_check(500, true);
