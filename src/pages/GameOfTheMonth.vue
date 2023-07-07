@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { image_base_path } from "../img.js";
+</script>
 <template>
   <div class="row mt-4">
     <div class="col">
@@ -9,7 +11,11 @@
   <div class="row mt-4">
     <div class="col">
       <h3 class="my-4">Casual</h3>
-      <img loading="lazy" class="mb-3 img-gom" src="/img/games/colt.jpg" />
+      <img
+        loading="lazy"
+        class="mb-3 img-gom"
+        :src="image_base_path + '/games/colt.jpg'"
+      />
       <h3 class="fw-bold text-start">Colt Express</h3>
       <p class="text-start">
         Die Strompreise zu hoch? Gierige Firmen rauben dir deinen letzten Taler?
@@ -33,7 +39,11 @@
       </p>
       <hr class="my-4" />
       <h3 class="my-4">Fortgeschritten</h3>
-      <img loading="lazy" class="mb-3 img-gom" src="/img/games/root.jpg" />
+      <img
+        loading="lazy"
+        class="mb-3 img-gom"
+        :src="image_base_path + '/games/root.jpg'"
+      />
       <h3 class="fw-bold text-start">Root</h3>
       <p class="text-start">
         In dem friedlichen Dickicht des großen Waldes ist es seit kurzem nicht
