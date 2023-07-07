@@ -1,4 +1,7 @@
 <script setup>
+import { watch } from "vue";
+import { useRoute } from "vue-router";
+
 import Navbar from "./components/Navbar.vue";
 
 const nav_items = [
@@ -14,24 +17,58 @@ const nav_items = [
     ],
   },
 ];
+
+const route = useRoute();
+
+watch(
+  () => route.fullPath,
+  async () => {
+    register_scroll_check(500);
+  }
+);
 </script>
 
 <template>
-  <Navbar :items="nav_items" sticky="0" />
+  <Navbar :items="nav_items" sticky="1" />
 
   <div class="container-sm mx-auto mt-4 text-center bg-body">
     <router-view> </router-view>
   </div>
 </template>
 <script>
-const interval = setInterval(slide_in, 500);
+if (slide_in()) {
+  register_scroll_check(500);
+}
+
+function register_scroll_check(delay) {
+  addEventListener(
+    "scroll",
+    (e) => {
+      const all_visible = slide_in();
+      if (!all_visible) {
+        setTimeout(register_scroll_check, delay);
+      } else {
+        console.log("all visible, stop");
+      }
+    },
+    { once: true }
+  );
+}
 
 function slide_in() {
+  console.log("chk");
   const elements = document.querySelectorAll(".slide-in");
+  let all_visible = true;
   for (const el of elements) {
+    const is_visible = el.classList.contains("visible");
     if (el.getBoundingClientRect().top < window.innerHeight) {
-      el.classList.add("visible");
+      if (!is_visible) {
+        el.classList.add("visible");
+      }
+    } else if (!is_visible) {
+      all_visible = false;
     }
   }
+  return all_visible;
 }
 </script>
