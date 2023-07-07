@@ -30,7 +30,9 @@ const route = useRoute();
 watch(
   () => route.fullPath,
   async () => {
-    register_scroll_check(500);
+    setTimeout(() => {
+      register_scroll_check(500, true);
+    }, 500);
   }
 );
 </script>
