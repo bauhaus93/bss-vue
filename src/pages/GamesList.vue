@@ -1,61 +1,3 @@
-<script setup>
-const games_casual = [
-  "Mindbug",
-  "Fantastische Reiche",
-  "Exploding Kittens",
-  "Mantis",
-  "Unstable Unicorns",
-  "Just One",
-  "So Kleever",
-  "Cascadia",
-  "Tempel des Schreckens",
-  "KLASK",
-  "Sea Salt & Paper",
-  "Auf die Nüsse",
-  "Ganz schön clever",
-  "My City",
-  "Wizard",
-  "Skull King",
-  "DOG",
-  "Uno Flip",
-  "Frantic",
-  "Parks",
-  "Dixit",
-  "Dobble",
-  "Taco Katze Ziege Käse Pizza",
-  "UNLOCK",
-  "Anno Domini",
-  "Bloodborne",
-  "Quacksalber",
-  "Zug um Zug",
-  "Amsterdam",
-  "Crokinole",
-  "7 Wonders",
-  "Patchwork",
-  "Munchkin",
-  "That’s not a hat",
-  "Cabo",
-  "Tiefseeabenteuer",
-  "Scout",
-  "Fun Facts",
-  "Colt Express",
-  "Times Up",
-];
-
-const games_advanced = [
-  "Dune Imperium",
-  "KLONG!",
-  "Everdell",
-  "Android: Netrunner",
-  "Revive",
-  "Dice Throne",
-  "Root",
-  "The Wolves",
-  "Guild of Merchant Explorers",
-  "Earth",
-];
-</script>
-
 <template>
   <div class="row mt-4">
     <div class="col">
@@ -90,6 +32,63 @@ const games_advanced = [
     </div>
   </div>
 </template>
+
+<script setup>
+const games_casual = [
+  "Mindbug",
+  "Fantastische Reiche",
+  "Exploding Kittens",
+  "Mantis",
+  "Unstable Unicorns",
+  "Just One",
+  "So Kleever",
+  "Cascadia",
+  "Tempel des Schreckens",
+  "KLASK",
+  "Sea Salt & Paper",
+  "Auf die Nüsse",
+  "Ganz schön clever",
+  "My City",
+  "Wizard",
+  "Skull King",
+  "DOG",
+  "Uno Flip",
+  "Frantic",
+  "Parks",
+  "Dixit",
+  "Dobble",
+  "Taco Katze Ziege Käse Pizza",
+  "UNLOCK",
+  "Anno Domini",
+  "Bloodborne",
+  "Quacksalber",
+  "Zug um Zug: Amsterdam",
+  "Crokinole",
+  "7 Wonders",
+  "Patchwork",
+  "Munchkin",
+  "That’s not a hat",
+  "Cabo",
+  "Tiefseeabenteuer",
+  "Scout",
+  "Fun Facts",
+  "Colt Express",
+  "Times Up",
+];
+
+const games_advanced = [
+  "Dune Imperium",
+  "KLONG!",
+  "Everdell",
+  "Android: Netrunner",
+  "Revive",
+  "Dice Throne",
+  "Root",
+  "The Wolves",
+  "Guild of Merchant Explorers",
+  "Earth",
+];
+</script>
 
 <style>
 li.list-group-item {

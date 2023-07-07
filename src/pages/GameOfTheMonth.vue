@@ -1,6 +1,3 @@
-<script setup>
-import { image_base_path } from "../img.js";
-</script>
 <template>
   <div class="row mt-4">
     <div class="col">
@@ -63,6 +60,11 @@ import { image_base_path } from "../img.js";
     </div>
   </div>
 </template>
+
+<script setup>
+import { image_base_path } from "../img.js";
+</script>
+
 <style>
 .img-gom {
   max-width: 75%;

@@ -1,64 +1,3 @@
-<script setup>
-import Carousel from "../components/Carousel.vue";
-import CardGroup from "../components/CardGroup.vue";
-
-import { image_base_path } from "../img.js";
-
-const next_event_date = new Date("2023-07-30");
-const images_last_event = Array(9)
-  .fill()
-  .map((e, i) => image_base_path + "/last/0" + (i + 1) + ".jpg");
-
-const card_contents = [
-  {
-    img: image_base_path + "/regal.jpg",
-    img_alt: "Ein Regal voller Spiele",
-    title: "Was bieten wir an?",
-    text: "Wir helfen bei der Auswahl des richtigen Spiels und erleichtern den Einstieg durch Regelerklärungen.",
-  },
-  {
-    img: image_base_path + "/grp.jpg",
-    img_alt: "Eine Gruppe nicer Menschen",
-    title: "Über uns",
-    text: "Wir sind selbst begeisterte BrettspielerInnen, die sich stetig am laufenden halten. Zu unseren Lieblingsspielen gehören: Root, 7 Wonders, Android: Netrunner und Dice Throne",
-  },
-  {
-    img: image_base_path + "/dice.jpg",
-    img_alt: "Ein Haufen Würfel",
-    title: "Unser Ziel",
-    text: "Wir möchten für BrettspielerInnen in Graz einen Ort schaffen, an dem sie zahlreiche Spiele ausprobieren und eine Community formen können",
-  },
-];
-
-const contact_infos = [
-  { icon: "envelope-at-fill", link: "mailto:brettspielsonntag@gmail.com" },
-  { icon: "instagram", link: "https://www.instagram.com/tradingcardsunited" },
-  { icon: "facebook", link: "https://www.facebook.com/tradingcardsunited" },
-  { icon: "discord", link: "https://discord.gg/nA7mtcVN8x" },
-];
-
-const date_normal = `${next_event_date.getDate()}.${
-  next_event_date.getMonth() + 1
-}.${next_event_date.getFullYear()}`;
-const date_compact = `${next_event_date.getFullYear()}${(
-  next_event_date.getMonth() + 1
-)
-  .toString()
-  .padStart(2, "0")}${next_event_date.getDate().toString().padStart(2, "0")}`;
-
-const ics = btoa(`BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Brettspielsonntag///NONSGML v1.0//EN
-BEGIN:VEVENT
-UID:bss_${date_compact}
-DTSTART:${date_compact}T090000Z
-DTEND:${date_compact}T180000Z
-SUMMARY:Brettspielsonntag
-GEO:47.07441096852008;15.419093892451908
-LOCATION: Ghegagasse 29\\, 8020 Graz
-END:VEVENT
-END:VCALENDAR`);
-</script>
 <template>
   <div class="row">
     <div class="col">
@@ -162,3 +101,65 @@ END:VCALENDAR`);
     </div>
   </div>
 </template>
+
+<script setup>
+import Carousel from "../components/Carousel.vue";
+import CardGroup from "../components/CardGroup.vue";
+
+import { image_base_path } from "../img.js";
+
+const next_event_date = new Date("2023-07-30");
+const images_last_event = Array(9)
+  .fill()
+  .map((e, i) => image_base_path + "/last/0" + (i + 1) + ".jpg");
+
+const card_contents = [
+  {
+    img: image_base_path + "/regal.jpg",
+    img_alt: "Ein Regal voller Spiele",
+    title: "Was bieten wir an?",
+    text: "Wir helfen bei der Auswahl des richtigen Spiels und erleichtern den Einstieg durch Regelerklärungen.",
+  },
+  {
+    img: image_base_path + "/grp.jpg",
+    img_alt: "Eine Gruppe nicer Menschen",
+    title: "Über uns",
+    text: "Wir sind selbst begeisterte BrettspielerInnen, die sich stetig am laufenden halten. Zu unseren Lieblingsspielen gehören: Root, 7 Wonders, Android: Netrunner und Dice Throne",
+  },
+  {
+    img: image_base_path + "/dice.jpg",
+    img_alt: "Ein Haufen Würfel",
+    title: "Unser Ziel",
+    text: "Wir möchten für BrettspielerInnen in Graz einen Ort schaffen, an dem sie zahlreiche Spiele ausprobieren und eine Community formen können",
+  },
+];
+
+const contact_infos = [
+  { icon: "envelope-at-fill", link: "mailto:brettspielsonntag@gmail.com" },
+  { icon: "instagram", link: "https://www.instagram.com/tradingcardsunited" },
+  { icon: "facebook", link: "https://www.facebook.com/tradingcardsunited" },
+  { icon: "discord", link: "https://discord.gg/nA7mtcVN8x" },
+];
+
+const date_normal = `${next_event_date.getDate()}.${
+  next_event_date.getMonth() + 1
+}.${next_event_date.getFullYear()}`;
+const date_compact = `${next_event_date.getFullYear()}${(
+  next_event_date.getMonth() + 1
+)
+  .toString()
+  .padStart(2, "0")}${next_event_date.getDate().toString().padStart(2, "0")}`;
+
+const ics = btoa(`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Brettspielsonntag///NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:bss_${date_compact}
+DTSTART:${date_compact}T090000Z
+DTEND:${date_compact}T180000Z
+SUMMARY:Brettspielsonntag
+GEO:47.07441096852008;15.419093892451908
+LOCATION: Ghegagasse 29\\, 8020 Graz
+END:VEVENT
+END:VCALENDAR`);
+</script>
