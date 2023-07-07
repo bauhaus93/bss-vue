@@ -2,26 +2,28 @@
 import Carousel from "../components/Carousel.vue";
 import CardGroup from "../components/CardGroup.vue";
 
+import { image_base_path } from "../img.js";
+
 const next_event_date = new Date("2023-07-30");
 const images_last_event = Array(9)
   .fill()
-  .map((e, i) => "last/0" + (i + 1) + ".jpg");
+  .map((e, i) => image_base_path + "/last/0" + (i + 1) + ".jpg");
 
 const card_contents = [
   {
-    img: "regal.jpg",
+    img: image_base_path + "/regal.jpg",
     img_alt: "Ein Regal voller Spiele",
     title: "Was bieten wir an?",
     text: "Wir helfen bei der Auswahl des richtigen Spiels und erleichtern den Einstieg durch Regelerklärungen.",
   },
   {
-    img: "grp.jpg",
+    img: image_base_path + "/grp.jpg",
     img_alt: "Eine Gruppe nicer Menschen",
     title: "Über uns",
     text: "Wir sind selbst begeisterte BrettspielerInnen, die sich stetig am laufenden halten. Zu unseren Lieblingsspielen gehören: Root, 7 Wonders, Android: Netrunner und Dice Throne",
   },
   {
-    img: "dice.jpg",
+    img: image_base_path + "/dice.jpg",
     img_alt: "Ein Haufen Würfel",
     title: "Unser Ziel",
     text: "Wir möchten für BrettspielerInnen in Graz einen Ort schaffen, an dem sie zahlreiche Spiele ausprobieren und eine Community formen können",
@@ -62,7 +64,7 @@ END:VCALENDAR`);
     <div class="col">
       <h1 class="main-title">Brettspielsonntag</h1>
       <p class="my-5">
-        <img src="/img/logo.png" />
+        <img :src="image_base_path + '/logo.png'" />
       </p>
       <p class="fs-3">Zahlreiche Spiele kostenlos testen</p>
     </div>

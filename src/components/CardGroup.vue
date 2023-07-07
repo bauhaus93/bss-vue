@@ -8,7 +8,7 @@ defineProps(["card_contents"]);
       <div class="card h-100 rounded-3">
         <img
           loading="lazy"
-          :src="'/img/' + content.img"
+          :src="content.img"
           class="card-img-top rounded-top-3"
           :alt="content.img_alt"
         />

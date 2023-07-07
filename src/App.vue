@@ -36,27 +36,28 @@ watch(
   </div>
 </template>
 <script>
-if (slide_in()) {
-  register_scroll_check(500);
-}
+addEventListener("DOMContentLoaded", (event) => {
+  register_scroll_check(500, true);
+});
 
-function register_scroll_check(delay) {
-  addEventListener(
-    "scroll",
-    (e) => {
-      const all_visible = slide_in();
-      if (!all_visible) {
-        setTimeout(register_scroll_check, delay);
-      } else {
-        console.log("all visible, stop");
-      }
-    },
-    { once: true }
-  );
+function register_scroll_check(delay, fire_instant) {
+  if ((fire_instant && !slide_in()) || !fire_instant) {
+    addEventListener(
+      "scroll",
+      (e) => {
+        const all_visible = slide_in();
+        if (!all_visible) {
+          setTimeout(register_scroll_check, delay, false);
+        } else {
+          console.log("all visible, stop");
+        }
+      },
+      { once: true }
+    );
+  }
 }
 
 function slide_in() {
-  console.log("chk");
   const elements = document.querySelectorAll(".slide-in");
   let all_visible = true;
   for (const el of elements) {

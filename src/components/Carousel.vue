@@ -43,7 +43,7 @@ function interact() {
         <img
           class="w-100"
           :loading="loading_type"
-          :src="'/img/' + img_path"
+          :src="img_path"
           :alt="'Nice Slide #' + i"
         />
       </div>
