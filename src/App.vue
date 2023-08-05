@@ -23,6 +23,7 @@ const nav_items = [
       link: "/prev/" + k,
     })),
   },
+  { title: "Shop", link: "/shop" },
 ];
 
 const route = useRoute();
@@ -31,6 +32,7 @@ watch(
   () => route.fullPath,
   async () => {
     setTimeout(() => {
+      window.scrollTo(0, 0);
       register_scroll_check(500, true);
     }, 500);
   },
@@ -50,8 +52,6 @@ function register_scroll_check(delay, fire_instant) {
         const all_visible = slide_in();
         if (!all_visible) {
           setTimeout(register_scroll_check, delay, false);
-        } else {
-          console.log("all visible, stop");
         }
       },
       { once: true },

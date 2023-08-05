@@ -11,7 +11,7 @@
       <img
         loading="lazy"
         class="mb-3 img-gom"
-        :src="image_base_path + '/games/colt.jpg'"
+        :src="get_image_path('games', 'colt.jpg')"
       />
       <h3 class="fw-bold text-start">Colt Express</h3>
       <p class="text-start">
@@ -39,7 +39,7 @@
       <img
         loading="lazy"
         class="mb-3 img-gom"
-        :src="image_base_path + '/games/root.jpg'"
+        :src="get_image_path('games', 'root.jpg')"
       />
       <h3 class="fw-bold text-start">Root</h3>
       <p class="text-start">
@@ -62,7 +62,7 @@
 </template>
 
 <script setup>
-import { image_base_path } from "../img.js";
+import { get_image_path } from "../img.js";
 </script>
 
 <style>

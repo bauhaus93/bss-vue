@@ -3,7 +3,7 @@
     <div class="col">
       <h1 class="main-title">Brettspielsonntag</h1>
       <p class="my-5">
-        <img :src="image_base_path + '/logo.png'" />
+        <img :src="get_logo()" />
       </p>
       <p class="fs-3">Zahlreiche Spiele kostenlos testen</p>
     </div>
@@ -43,6 +43,7 @@
     <div class="row mt-4">
       <div class="col">
         <h3>Wir freuen uns auf dich!</h3>
+        <hr />
       </div>
     </div>
   </div>
@@ -50,11 +51,11 @@
   <div class="row mt-5">
     <div class="col">
       <h2>Spieleprogramm</h2>
-      <ul>
-        <li>13:00 - Fantastische Reiche</li>
-        <li>15:00 - Challengers (Preis zu gewinnen)</li>
-        <li>17:00 - 7 Wonders (Preis zu gewinnen)</li>
-        <li>19:00 - Hitster</li>
+      <ul class="list-group">
+        <li class="list-group-item" v-for="entry in program" :key="entry">
+          <span class="fw-bold">{{ entry.time }}</span> -
+          {{ entry.game }}
+        </li>
       </ul>
     </div>
   </div>
@@ -62,7 +63,7 @@
   <div class="row mt-5">
     <div class="col">
       <h2>Eindrücke vom letzten Event</h2>
-      <Carousel id="carousel_last_event" :image_paths="images_last_event" />
+      <Carousel id="carousel_last_event" :image_paths="last_event.images" />
     </div>
   </div>
 
@@ -118,28 +119,33 @@
 import Carousel from "../components/Carousel.vue";
 import CardGroup from "../components/CardGroup.vue";
 
-import { image_base_path } from "../img.js";
+import { get_image_path, get_logo } from "../img.js";
+import { last_event } from "../events.js";
 
-const next_event_date = new Date("2023-08-30");
-const images_last_event = Array(9)
-  .fill()
-  .map((e, i) => image_base_path + "/last/0" + (i + 1) + ".jpg");
+const next_event_date = new Date("2023-08-27");
+
+const program = [
+  { time: "13:00", game: "Fantastische Reiche" },
+  { time: "15:00", game: "Challengers (Preis zu gewinnen)" },
+  { time: "17:00", game: "7 Wonders (Preis zu gewinnen)" },
+  { time: "19:00", game: "Hitster" },
+];
 
 const card_contents = [
   {
-    img: image_base_path + "/regal.jpg",
+    img: get_image_path("", "regal.jpg"),
     img_alt: "Ein Regal voller Spiele",
     title: "Was bieten wir an?",
     text: "Wir helfen bei der Auswahl des richtigen Spiels und erleichtern den Einstieg durch Regelerklärungen.",
   },
   {
-    img: image_base_path + "/grp.jpg",
+    img: get_image_path("", "grp.jpg"),
     img_alt: "Eine Gruppe nicer Menschen",
     title: "Über uns",
     text: "Wir sind selbst begeisterte BrettspielerInnen, die sich stetig am laufenden halten. Zu unseren Lieblingsspielen gehören: Root, 7 Wonders, Android: Netrunner und Dice Throne",
   },
   {
-    img: image_base_path + "/dice.jpg",
+    img: get_image_path("", "dice.jpg"),
     img_alt: "Ein Haufen Würfel",
     title: "Unser Ziel",
     text: "Wir möchten für BrettspielerInnen in Graz einen Ort schaffen, an dem sie zahlreiche Spiele ausprobieren und eine Community formen können",
