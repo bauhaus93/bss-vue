@@ -49,6 +49,18 @@
 
   <div class="row mt-5">
     <div class="col">
+      <h2>Spieleprogramm</h2>
+      <ul>
+        <li>13:00 - Fantastische Reiche</li>
+        <li>15:00 - Challengers (Preis zu gewinnen)</li>
+        <li>17:00 - 7 Wonders (Preis zu gewinnen)</li>
+        <li>19:00 - Hitster</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
       <h2>Eindrücke vom letzten Event</h2>
       <Carousel id="carousel_last_event" :image_paths="images_last_event" />
     </div>
@@ -108,7 +120,7 @@ import CardGroup from "../components/CardGroup.vue";
 
 import { image_base_path } from "../img.js";
 
-const next_event_date = new Date("2023-07-30");
+const next_event_date = new Date("2023-08-30");
 const images_last_event = Array(9)
   .fill()
   .map((e, i) => image_base_path + "/last/0" + (i + 1) + ".jpg");
@@ -141,9 +153,13 @@ const contact_infos = [
   { icon: "discord", link: "https://discord.gg/nA7mtcVN8x" },
 ];
 
-const date_normal = `${next_event_date.getDate()}.${
-  next_event_date.getMonth() + 1
-}.${next_event_date.getFullYear()}`;
+const date_normal = `${next_event_date
+  .getDate()
+  .toString()
+  .padStart(2, "0")}.${(next_event_date.getMonth() + 1)
+  .toString()
+  .padStart(2, "0")}.${next_event_date.getFullYear()}`;
+
 const date_compact = `${next_event_date.getFullYear()}${(
   next_event_date.getMonth() + 1
 )

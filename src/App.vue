@@ -11,17 +11,17 @@ import { watch } from "vue";
 import { useRoute } from "vue-router";
 
 import Navbar from "./components/Navbar.vue";
+import { previous_events } from "./events.js";
 
 const nav_items = [
   { title: "Spieleliste", link: "/list" },
   { title: "Spiel des Monats", link: "/monthly-favourite" },
   {
     title: "Vergangene Events",
-    items: [
-      { title: "01.01.0111", link: "/prev/01" },
-      { title: "02.01.0111", link: "/prev/02" },
-      { title: "03.01.0111", link: "/prev/03" },
-    ],
+    items: Object.keys(previous_events).map((k) => ({
+      title: previous_events[k].date,
+      link: "/prev/" + k,
+    })),
   },
 ];
 
@@ -33,7 +33,7 @@ watch(
     setTimeout(() => {
       register_scroll_check(500, true);
     }, 500);
-  }
+  },
 );
 </script>
 
@@ -54,7 +54,7 @@ function register_scroll_check(delay, fire_instant) {
           console.log("all visible, stop");
         }
       },
-      { once: true }
+      { once: true },
     );
   }
 }

@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import Home from "./pages/Home.vue"
 import GamesList from "./pages/GamesList.vue"
 import GameOfTheMonth from "./pages/GameOfTheMonth.vue"
+import RecentEvents from "./pages/RecentEvents.vue"
 import NotFound from "./pages/NotFound.vue"
 
 
@@ -20,6 +21,8 @@ const routes = [
   { path: "/not-found",
     name: "not_found",
     component: GameOfTheMonth },
+  { path: "/prev/:date",
+    component: RecentEvents},
   { path: "/:pathMatch(.*)*",
     component: NotFound },
 ];
@@ -27,7 +30,9 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: routes
+  routes: routes,
+  strict: true,
+  sensitive: true
 });
 
 
