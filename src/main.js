@@ -4,7 +4,7 @@ import bootstrap from "bootstrap/dist/js/bootstrap.js"
 import App from "./App.vue"
 import { router } from "./router.js"
 
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap-grid.min.css"
 import "bootstrap-icons/font/bootstrap-icons.min.css"
 import "./style.css"
 import "./scss/slide.scss"
