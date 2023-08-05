@@ -2,7 +2,7 @@
   <Navbar :items="nav_items" title="Brettspielsonntag" sticky="1" />
 
   <div class="container-sm mx-auto mt-4 text-center bg-body">
-    <router-view> </router-view>
+    <router-view :key="$route.fullPath"> </router-view>
   </div>
 </template>
 

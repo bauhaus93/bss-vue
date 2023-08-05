@@ -1,23 +1,3 @@
-<script setup>
-import { reactive, computed } from "vue";
-
-defineProps(["id", "image_paths"]);
-
-const carousel = reactive({
-  interacted: false,
-});
-
-const loading_type = computed(() => {
-  return carousel.interacted ? "eager" : "lazy";
-});
-
-function interact() {
-  if (!carousel.interacted) {
-    carousel.interacted = true;
-  }
-}
-</script>
-
 <template>
   <div :id="id" class="carousel slide">
     <div class="carousel-indicators">
@@ -70,6 +50,26 @@ function interact() {
     </button>
   </div>
 </template>
+
+<script setup>
+import { reactive, computed } from "vue";
+
+defineProps(["id", "image_paths"]);
+
+const carousel = reactive({
+  interacted: false,
+});
+
+const loading_type = computed(() => {
+  return carousel.interacted ? "eager" : "lazy";
+});
+
+function interact() {
+  if (!carousel.interacted) {
+    carousel.interacted = false;
+  }
+}
+</script>
 
 <style>
 .carousel img {
