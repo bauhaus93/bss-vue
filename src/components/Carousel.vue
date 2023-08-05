@@ -50,7 +50,6 @@
     </button>
   </div>
 </template>
-
 <script setup>
 import { reactive, computed } from "vue";
 
@@ -66,7 +65,7 @@ const loading_type = computed(() => {
 
 function interact() {
   if (!carousel.interacted) {
-    carousel.interacted = false;
+    carousel.interacted = true;
   }
 }
 </script>
