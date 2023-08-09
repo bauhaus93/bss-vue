@@ -16,7 +16,7 @@ const previous_events = {
 
 "2023-06": {
     date: "24.06.2023",
-    images: get_image_paths("2023-06", 0, 10)
+    images: get_image_paths("2023-06", 0, 9)
   },
 
 "2023-07": {

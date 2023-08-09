@@ -1,5 +1,5 @@
 
-const image_base_path = "https://bss-img.b-cdn.net";
+const image_base_path = "https://cdn.brettspielsonntag.at";
 
 function get_image_paths(prefix, start, end) {
 return Array(end - start + 1)
