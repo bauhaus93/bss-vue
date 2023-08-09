@@ -72,5 +72,6 @@ function interact() {
 
 <style>
 .carousel img {
+  max-width: 600px;
 }
 </style>
