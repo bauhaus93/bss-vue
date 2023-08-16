@@ -125,10 +125,10 @@ import { last_event } from "../events.js";
 const next_event_date = new Date("2023-08-27");
 
 const program = [
-  { time: "13:00", game: "Fantastische Reiche" },
+  { time: "13:00", game: "King of Tokyo" },
   { time: "15:00", game: "Challengers (Preis zu gewinnen)" },
   { time: "17:00", game: "7 Wonders (Preis zu gewinnen)" },
-  { time: "19:00", game: "Hitster" },
+  { time: "19:00", game: "Barking Kittens" },
 ];
 
 const card_contents = [
@@ -174,14 +174,16 @@ const date_compact = `${next_event_date.getFullYear()}${(
 
 const ics = btoa(`BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Brettspielsonntag///NONSGML v1.0//EN
+PRODID:brettspielsonntag.at//Brettspielsonntag
+METHOD:PUBLISH
 BEGIN:VEVENT
 UID:bss_${date_compact}
+LOCATION: Ghegagasse 29\\, 8020 Graz
+SUMMARY:Brettspielsonntag
+DESCRIPTION:Brettspielsonntag
+CLASS:PUBLIC
 DTSTART:${date_compact}T090000Z
 DTEND:${date_compact}T180000Z
-SUMMARY:Brettspielsonntag
-GEO:47.07441096852008;15.419093892451908
-LOCATION: Ghegagasse 29\\, 8020 Graz
 END:VEVENT
 END:VCALENDAR`);
 </script>
