@@ -51,12 +51,14 @@
   <div class="row mt-5">
     <div class="col">
       <h2>Spieleprogramm</h2>
-      <ul class="list-group">
-        <li class="list-group-item" v-for="entry in program" :key="entry">
-          <span class="fw-bold">{{ entry.time }}</span> -
-          {{ entry.game }}
-        </li>
-      </ul>
+      <table class="table table-borderless">
+        <tbody>
+          <tr v-for="entry in program" :key="entry">
+            <td class="fw-bold text-end">{{ entry.time }}</td>
+            <td class="text-start">{{ entry.game }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
