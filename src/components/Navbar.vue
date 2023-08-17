@@ -5,9 +5,10 @@
   >
     <div class="container-fluid">
       <a class="navbar-brand" href="/"
-        ><img src="/favicon.ico" /><span id="title" class="px-2 fw-bold">{{
-          title
-        }}</span></a
+        ><img
+          src="/favicon.ico"
+          alt="Eine Gruppe verschiedenster Wesen der Pop-Kultur sitzt an einem Lagerfeuer."
+        /><span id="title" class="px-2 fw-bold">{{ title }}</span></a
       >
 
       <button
