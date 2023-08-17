@@ -12,10 +12,9 @@ function get_image_path(prefix, name) {
 }
 
 
-function get_logo() {
-  return `${ image_base_path }/logo.png`;
-}
+const logo_path = `${ image_base_path }/logo.png`;
+const logo_alt_text = "Eine Gruppe verschiedenster Wesen sitzt um ein Lagerfeuer herum: Darth Vader, Deadpool, ein Baby-C'Thulhu, eine Maus und ein paar Meeple.";
 
-export { get_image_paths, get_image_path, get_logo };
+export { get_image_paths, get_image_path, logo_path, logo_alt_text };
 
 

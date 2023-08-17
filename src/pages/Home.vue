@@ -3,7 +3,7 @@
     <div class="col">
       <h1 class="main-title">Brettspielsonntag</h1>
       <p class="my-5">
-        <img :src="get_logo()" />
+        <img :src="logo_path" :alt="logo_alt_text" />
       </p>
       <p class="fs-3">Zahlreiche Spiele kostenlos testen</p>
     </div>
@@ -121,7 +121,7 @@
 import Carousel from "../components/Carousel.vue";
 import CardGroup from "../components/CardGroup.vue";
 
-import { get_image_path, get_logo } from "../img.js";
+import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
 const next_event_date = new Date("2023-08-27");

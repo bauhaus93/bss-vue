@@ -4,7 +4,7 @@
     :class="{ 'sticky-top': sticky == '1' }"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" to="/"
+      <a class="navbar-brand" href="/"
         ><img src="/favicon.ico" /><span id="title" class="px-2 fw-bold">{{
           title
         }}</span></a
@@ -43,7 +43,7 @@
             <span v-if="item.items">
               <a
                 class="nav-link dropdown-toggle"
-                to="#"
+                href="#"
                 :id="next_dropdown_id()"
                 role="button"
                 data-bs-toggle="dropdown"
