@@ -1,5 +1,5 @@
 import { createApp } from "vue"
-import bootstrap from "bootstrap/dist/js/bootstrap.js"
+import bootstrap from "bootstrap/dist/js/bootstrap.min.js"
 
 import App from "./App.vue"
 import { router } from "./router.js"

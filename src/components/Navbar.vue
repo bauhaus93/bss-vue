@@ -31,13 +31,13 @@
             class="nav-item"
             :class="{ dropdown: item.items }"
           >
-            <router-link v-if="item.link" class="nav-link" :to="item.link">
+            <a v-if="item.link" class="nav-link" :href="item.link">
               <span
                 data-bs-toggle="collapse"
                 data-bs-target=".navbar-collapse.show"
               >
                 {{ item.title }}</span
-              ></router-link
+              ></a
             >
 
             <span v-if="item.items">
@@ -53,13 +53,13 @@
               </router-link>
               <ul class="dropdown-menu bg-dark" :aria-labelledby="dropdown_id">
                 <li v-for="sub_item in item.items" :key="sub_item">
-                  <router-link class="dropdown-item" :to="sub_item.link">
+                  <a class="dropdown-item" :href="sub_item.link">
                     <span
                       data-bs-toggle="collapse"
                       data-bs-target=".navbar-collapse.show"
                     >
                       {{ sub_item.title }}</span
-                    ></router-link
+                    ></a
                   >
                 </li>
               </ul>
