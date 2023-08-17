@@ -4,10 +4,10 @@
     :class="{ 'sticky-top': sticky == '1' }"
   >
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/"
+      <a class="navbar-brand" to="/"
         ><img src="/favicon.ico" /><span id="title" class="px-2 fw-bold">{{
           title
-        }}</span></router-link
+        }}</span></a
       >
 
       <button
@@ -41,7 +41,7 @@
             >
 
             <span v-if="item.items">
-              <router-link
+              <a
                 class="nav-link dropdown-toggle"
                 to="#"
                 :id="next_dropdown_id()"
@@ -50,7 +50,7 @@
                 aria-expanded="false"
               >
                 {{ item.title }}
-              </router-link>
+              </a>
               <ul class="dropdown-menu bg-dark" :aria-labelledby="dropdown_id">
                 <li v-for="sub_item in item.items" :key="sub_item">
                   <a class="dropdown-item" :href="sub_item.link">
