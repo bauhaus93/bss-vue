@@ -1,16 +1,3 @@
-<script setup>
-import { reactive, computed } from "vue";
-
-defineProps(["title", "items", "sticky"]);
-
-let dropdown_id = 0;
-
-function next_dropdown_id() {
-  dropdown_id++;
-  return "dropdown_" + dropdown_id;
-}
-</script>
-
 <template>
   <nav
     class="navbar navbar-expand-md bg-dark navbar-dark"
@@ -44,9 +31,14 @@ function next_dropdown_id() {
             class="nav-item"
             :class="{ dropdown: item.items }"
           >
-            <router-link v-if="item.link" class="nav-link" :to="item.link">{{
-              item.title
-            }}</router-link>
+            <router-link v-if="item.link" class="nav-link" :to="item.link">
+              <span
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+              >
+                {{ item.title }}</span
+              ></router-link
+            >
 
             <span v-if="item.items">
               <router-link
@@ -61,9 +53,14 @@ function next_dropdown_id() {
               </router-link>
               <ul class="dropdown-menu bg-dark" :aria-labelledby="dropdown_id">
                 <li v-for="sub_item in item.items" :key="sub_item">
-                  <router-link class="dropdown-item" :to="sub_item.link">{{
-                    sub_item.title
-                  }}</router-link>
+                  <router-link class="dropdown-item" :to="sub_item.link">
+                    <span
+                      data-bs-toggle="collapse"
+                      data-bs-target=".navbar-collapse.show"
+                    >
+                      {{ sub_item.title }}</span
+                    ></router-link
+                  >
                 </li>
               </ul>
             </span>
@@ -73,3 +70,16 @@ function next_dropdown_id() {
     </div>
   </nav>
 </template>
+<script setup>
+import { reactive, computed } from "vue";
+
+defineProps(["title", "items", "sticky"]);
+
+let dropdown_id = 0;
+
+function next_dropdown_id() {
+  dropdown_id++;
+  return "dropdown_" + dropdown_id;
+}
+</script>
+<script></script>
