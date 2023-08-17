@@ -14,7 +14,7 @@ defineProps(["card_contents"]);
         />
 
         <div class="card-body bg-white text-black text-start rounded-bottom-3">
-          <h5 class="card-title">{{ content.title }}</h5>
+          <p class="card-title fs-4">{{ content.title }}</p>
           <p class="card-text">{{ content.text }}</p>
         </div>
       </div>

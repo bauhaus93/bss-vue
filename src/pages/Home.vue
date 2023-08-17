@@ -20,6 +20,7 @@
       <div class="col-sm">
         <a
           :href="'data:text/calendar;base64,' + ics"
+          aria-label="Lade einen Kalendereintrag für den nächsten Brettspielsonntag herunter"
           download="brettspielsonntag.ics"
           ><i class="bi bi-calendar2-event"></i
         ></a>
@@ -27,7 +28,10 @@
         <p>11:00-20:00</p>
       </div>
       <div class="col-sm">
-        <a href="https://goo.gl/maps/k1NgNeTTppxyvAoR9" target="_new"
+        <a
+          href="https://goo.gl/maps/k1NgNeTTppxyvAoR9"
+          target="_new"
+          aria-label="Link zu Google Maps, der den Veranstaltungsort anzeigt."
           ><i class="bi bi-geo-alt-fill"></i
         ></a>
         <p class="fw-bold">Trading Cards United</p>
@@ -109,7 +113,7 @@
         :key="info"
         class="col-sm-6 col-md mb-3"
       >
-        <a :href="info.link" target="_new"
+        <a :href="info.link" :aria-label="info.aria_label" target="_new"
           ><i class="bi" :class="'bi-' + info.icon"></i
         ></a>
       </div>
@@ -155,10 +159,26 @@ const card_contents = [
 ];
 
 const contact_infos = [
-  { icon: "envelope-at-fill", link: "mailto:brettspielsonntag@gmail.com" },
-  { icon: "instagram", link: "https://www.instagram.com/tradingcardsunited" },
-  { icon: "facebook", link: "https://www.facebook.com/tradingcardsunited" },
-  { icon: "discord", link: "https://discord.gg/nA7mtcVN8x" },
+  {
+    icon: "envelope-at-fill",
+    link: "mailto:brettspielsonntag@gmail.com",
+    aria_label: "Link zu unserer Mailadresse",
+  },
+  {
+    icon: "instagram",
+    link: "https://www.instagram.com/tradingcardsunited",
+    aria_label: "Link zur Instagram Seite von TradingCardsUnited",
+  },
+  {
+    icon: "facebook",
+    link: "https://www.facebook.com/tradingcardsunited",
+    aria_label: "Link zur Facebook Seite von TradingCardsUnited",
+  },
+  {
+    icon: "discord",
+    link: "https://discord.gg/nA7mtcVN8x",
+    aria_label: "Einladungslink zu unserem Discord",
+  },
 ];
 
 const date_normal = `${next_event_date
