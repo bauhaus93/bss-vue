@@ -41,7 +41,7 @@ watch(
 
 <script>
 addEventListener("DOMContentLoaded", (event) => {
-  register_scroll_check(500, true);
+  register_scroll_check(250, true);
 });
 
 function register_scroll_check(delay, fire_instant) {

@@ -61,7 +61,7 @@ const games_casual = [
   "UNLOCK",
   "Anno Domini",
   "Bloodborne",
-  "Quacksalber",
+  "Quacksalber von Quedlinburg",
   "Zug um Zug: Amsterdam",
   "Crokinole",
   "7 Wonders",
@@ -73,7 +73,7 @@ const games_casual = [
   "Scout",
   "Fun Facts",
   "Colt Express",
-  "Times Up",
+  "Times Up!",
 ];
 
 const games_advanced = [

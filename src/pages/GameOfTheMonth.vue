@@ -67,7 +67,7 @@ import { get_image_path } from "../img.js";
 
 <style>
 .img-gom {
-  max-width: 75%;
+  max-width: 400px;
   height: auto;
 }
 </style>
