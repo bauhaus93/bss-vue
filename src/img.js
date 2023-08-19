@@ -8,7 +8,7 @@ return Array(end - start + 1)
 }
 
 function get_image_path(prefix, name) {
-  return `${ image_base_path }/${prefix}/${name}`;
+  return `${ image_base_path }${prefix ? "/" + prefix : ""}/${name}`;
 }
 
 
