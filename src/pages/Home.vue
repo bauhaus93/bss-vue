@@ -134,7 +134,7 @@ const program = [
   { time: "13:00", game: "King of Tokyo" },
   { time: "15:00", game: "Challengers (Preis zu gewinnen)" },
   { time: "17:00", game: "7 Wonders (Preis zu gewinnen)" },
-  { time: "19:00", game: "Black Hole" },
+  { time: "19:00", game: "Black Hole Buccaneers" },
 ];
 
 const card_contents = [
