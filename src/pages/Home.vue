@@ -128,7 +128,7 @@ import CardGroup from "../components/CardGroup.vue";
 import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
-const next_event_date = new Date("2023-08-27");
+const next_event_date = new Date("2023-09-17");
 
 const program = [
   { time: "13:00", game: "King of Tokyo" },
