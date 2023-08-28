@@ -42,15 +42,12 @@ const images = get_image_paths("to-buy", 1, 4);
 
 const games = [
   { name: "Final Girl Core Box (EN)", price: 17.9 },
-  { name: "Final Girl Intruders (EN)", price: 18.9 },
   { name: "Final Girl Ratchet Lady (EN)", price: 18.9 },
   { name: "Werwölfe", price: 24.9 },
   { name: "QE", price: 29.9 },
   { name: "Barking Kittens", price: 16.9 },
-  { name: "Times Up! (EN)", price: 24.9 },
   { name: "7 Wonders", price: 49.9 },
   { name: "The Wolves", price: 47.9 },
-  { name: "Citadels", price: 29.9 },
   { name: "Unstable Unicorns", price: 24.9 },
   { name: "Fantastische Reiche", price: 19.9 },
   { name: "Root", price: 49.9 },
