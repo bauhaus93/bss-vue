@@ -132,9 +132,9 @@ const next_event_date = new Date("2023-09-17");
 
 const program = [
   { time: "13:00", game: "King of Tokyo" },
-  { time: "15:00", game: "Challengers (Preis zu gewinnen)" },
-  { time: "17:00", game: "7 Wonders (Preis zu gewinnen)" },
-  { time: "19:00", game: "Black Hole Buccaneers" },
+  { time: "15:00", game: "Challengers" },
+  { time: "17:00", game: "Sushi Go" },
+  { time: "19:00", game: "Times up!" },
 ];
 
 const card_contents = [
