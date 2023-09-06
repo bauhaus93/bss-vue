@@ -14,16 +14,16 @@ import Navbar from "./components/Navbar.vue";
 import { previous_events } from "./events.js";
 
 const nav_items = [
-  { title: "Spieleliste", link: "/list" },
-  { title: "Spiel des Monats", link: "/monthly-favourite" },
+  { title: "Spieleliste", link: "/list/" },
+  { title: "Spiel des Monats", link: "/monthly-favourite/" },
   {
     title: "Vergangene Events",
     items: Object.keys(previous_events).map((k) => ({
       title: previous_events[k].date,
-      link: "/prev/" + k,
+      link: "/prev/" + k + "/",
     })),
   },
-  { title: "Shop", link: "/shop" },
+  { title: "Shop", link: "/shop/" },
 ];
 
 const route = useRoute();
