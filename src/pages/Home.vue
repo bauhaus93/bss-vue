@@ -66,6 +66,21 @@
     </div>
   </div>
 
+  <div class="row mt-3">
+    <div class="col">
+      <h2>Zukünftige Events</h2>
+      <ul class="list-group">
+        <li
+          v-for="entry in future_event_dates"
+          :key="entry"
+          class="list-group-item text-center"
+        >
+          {{ entry }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <div class="row mt-5">
     <div class="col">
       <h2>Eindrücke vom letzten Event</h2>
@@ -130,6 +145,13 @@ import { last_event } from "../events.js";
 
 const next_event_date = new Date("2023-09-17");
 
+const future_event_dates = [
+  date_formatter(next_event_date),
+  date_formatter(new Date("2023-10-15")),
+  date_formatter(new Date("2023-11-26")),
+  date_formatter(new Date("2023-12-17")),
+];
+
 const program = [
   { time: "13:00", game: "King of Tokyo" },
   { time: "15:00", game: "Challengers" },
@@ -181,12 +203,13 @@ const contact_infos = [
   },
 ];
 
-const date_normal = `${next_event_date
-  .getDate()
-  .toString()
-  .padStart(2, "0")}.${(next_event_date.getMonth() + 1)
-  .toString()
-  .padStart(2, "0")}.${next_event_date.getFullYear()}`;
+function date_formatter(date) {
+  return `${date.getDate().toString().padStart(2, "0")}.${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}.${date.getFullYear()}`;
+}
+
+const date_normal = date_formatter(next_event_date);
 
 const date_compact = `${next_event_date.getFullYear()}${(
   next_event_date.getMonth() + 1
