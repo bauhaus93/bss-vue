@@ -147,7 +147,7 @@ const next_event_date = new Date("2023-09-17");
 
 const future_event_dates = [
   date_formatter(next_event_date),
-  date_formatter(new Date("2023-10-15")),
+  date_formatter(new Date("2023-10-22")),
   date_formatter(new Date("2023-11-26")),
   date_formatter(new Date("2023-12-17")),
 ];
