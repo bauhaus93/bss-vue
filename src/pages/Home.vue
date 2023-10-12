@@ -154,7 +154,7 @@ const future_event_dates = [
 const program = [
   { time: "13:00", game: "King of Tokyo" },
   { time: "15:00", game: "Challengers" },
-  { time: "17:00", game: "Sushi Go" },
+  { time: "17:00", game: "Heat" },
   { time: "19:00", game: "Times up!" },
 ];
 
