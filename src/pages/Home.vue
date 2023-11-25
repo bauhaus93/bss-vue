@@ -151,10 +151,11 @@ const future_event_dates = [
 ];
 
 const program = [
-  { time: "13:00", game: "King of Tokyo" },
-  { time: "15:00", game: "Challengers" },
-  { time: "17:00", game: "Heat" },
-  { time: "19:00", game: "Times up!" },
+  { time: "13:00", game: "Quaksalber / Skull King"" },
+  { time: "14:30", game: "Challengers / Takenoko" },
+  { time: "16:00", game: "Auf die Nüsse / Ready Set Bet" },
+  { time: "17:30", game: "Schnitzeljagd / Libertalia" },
+  { time: "19:00", game: "Thats not a hat / Tiefseeabenteuer" },
 ];
 
 const card_contents = [
