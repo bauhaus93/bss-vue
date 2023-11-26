@@ -151,10 +151,10 @@ const future_event_dates = [
 ];
 
 const program = [
-  { time: "13:00", game: "Quaksalber / Skull King" },
+  { time: "13:00", game: "Quacksalber / Skull King" },
   { time: "14:30", game: "Challengers / Takenoko" },
   { time: "16:00", game: "Auf die Nüsse / Ready Set Bet" },
-  { time: "17:30", game: "Schnitzeljagd / Libertalia" },
+  { time: "17:30", game: "Schnitzeljagd / Here to Slay" },
   { time: "19:00", game: "Thats not a hat / Tiefseeabenteuer" },
 ];
 
