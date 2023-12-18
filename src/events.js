@@ -42,9 +42,14 @@ const previous_events = {
     date: "26.11.2023",
     images: get_image_paths("2023-11", 1, 19)
   },
+"2023-12": {
+    date: "17.12.2023",
+    images: get_image_paths("2023-12", 1, 15)
+  },
+
 
 };
 
-const last_event = previous_events["2023-11"];
+const last_event = previous_events["2023-12"];
 
 export { previous_events, last_event };
