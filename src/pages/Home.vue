@@ -25,7 +25,7 @@
           ><i class="bi bi-calendar2-event"></i
         ></a>
         <p class="fw-bold">{{ date_normal }}</p>
-        <p>11:00-20:00</p>
+        <p>13:00-20:00</p>
       </div>
       <div class="col-sm">
         <a
