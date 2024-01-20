@@ -52,20 +52,6 @@
     </div>
   </div>
 
-  <div class="row mt-5">
-    <div class="col">
-      <h2>Spieleprogramm</h2>
-      <table class="table table-borderless">
-        <tbody>
-          <tr v-for="entry in program" :key="entry">
-            <td class="fw-bold text-end">{{ entry.time }}</td>
-            <td class="text-start">{{ entry.game }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
   <div class="row mt-3">
     <div class="col">
       <h2>Zukünftige Events</h2>
@@ -149,14 +135,6 @@ const future_event_dates = [
   date_formatter(next_event_date),
   date_formatter(new Date("2024-02-25")),
   date_formatter(new Date("2024-03-24")),
-];
-
-const program = [
-  { time: "13:00", game: "Quacksalber / Skull King" },
-  { time: "14:30", game: "Challengers / Takenoko" },
-  { time: "16:00", game: "Auf die Nüsse / Ready Set Bet" },
-  { time: "17:30", game: "Schnitzeljagd / Here to Slay" },
-  { time: "19:00", game: "Thats not a hat / Tiefseeabenteuer" },
 ];
 
 const card_contents = [
