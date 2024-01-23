@@ -165,8 +165,13 @@ const contact_infos = [
   },
   {
     icon: "instagram",
-    link: "https://www.instagram.com/tradingcardsunited",
-    aria_label: "Link zur Instagram Seite von TradingCardsUnited",
+    link: "https://www.instagram.com/brettspiel_sonntag",
+    aria_label: "Link zur Instagram Seite des Brettspielsonntags",
+  },
+  {
+    icon: "whatsapp",
+    link: "https://chat.whatsapp.com/L0lnsNOYjaPIIuZcVqT3O2",
+    aria_label: "Link zur WhatsApp Gruppe des Brettspielsonntags",
   },
   {
     icon: "facebook",
