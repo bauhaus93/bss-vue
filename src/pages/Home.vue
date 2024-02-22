@@ -9,6 +9,16 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col">
+      <p class="fs-5 mt-5">
+        Der Termin am 25.02.2024 entfällt leider wegen Krankheit. Dafür freuen
+        wir uns, euch im März zum einjährigen Bestehen des Brettspielsonntags
+        wieder zu sehen!
+      </p>
+    </div>
+  </div>
+
   <div class="slide-in">
     <div class="row mt-5">
       <div class="col">
@@ -129,12 +139,9 @@ import CardGroup from "../components/CardGroup.vue";
 import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
-const next_event_date = new Date("2024-02-25");
+const next_event_date = new Date("2024-03-24");
 
-const future_event_dates = [
-  date_formatter(next_event_date),
-  date_formatter(new Date("2024-03-24")),
-];
+const future_event_dates = [date_formatter(next_event_date)];
 
 const card_contents = [
   {
