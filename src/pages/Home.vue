@@ -129,7 +129,7 @@ import CardGroup from "../components/CardGroup.vue";
 import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
-const next_event_date = new Date("2024-05-30");
+const next_event_date = new Date("2024-06-30");
 
 const future_event_dates = [date_formatter(next_event_date)];
 
