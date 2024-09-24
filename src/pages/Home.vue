@@ -18,7 +18,9 @@
     </div>
     <div class="row">
       <div class="col-sm">
-        Am 28.99 und 29.09 findet ihr uns auch ab 13:00 auf der Herbstmesse in Graz
+        <h3>
+        Am 28.09 und 29.09 findet ihr uns ab 13:00 auf der Herbstmesse in Graz
+        </h3>
       </div>
     </div>
     <div class="row">
