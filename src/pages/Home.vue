@@ -18,6 +18,11 @@
     </div>
     <div class="row">
       <div class="col-sm">
+        Am 28.99 und 29.09 findet ihr uns auch ab 13:00 auf der Herbstmesse in Graz
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
         <a
           :href="'data:text/calendar;base64,' + ics"
           aria-label="Lade einen Kalendereintrag für den nächsten Brettspielsonntag herunter"
@@ -29,13 +34,13 @@
       </div>
       <div class="col-sm">
         <a
-          href="https://goo.gl/maps/k1NgNeTTppxyvAoR9"
+          href="https://maps.app.goo.gl/GD8aVdLDnVEk3N5NA"
           target="_new"
           aria-label="Link zu Google Maps, der den Veranstaltungsort anzeigt."
           ><i class="bi bi-geo-alt-fill"></i
         ></a>
         <p class="fw-bold">Trading Cards United</p>
-        <p>Ghegagasse 29, 8020 Graz</p>
+        <p>Münzgrabenstraße 10, 8010 Graz</p>
       </div>
 
       <div class="col-sm">
@@ -129,7 +134,7 @@ import CardGroup from "../components/CardGroup.vue";
 import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
-const next_event_date = new Date("2024-08-25");
+const next_event_date = new Date("2024-10-06");
 
 const future_event_dates = [date_formatter(next_event_date)];
 
@@ -202,7 +207,7 @@ PRODID:brettspielsonntag.at//Brettspielsonntag
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:bss_${date_compact}
-LOCATION: Ghegagasse 29\\, 8020 Graz
+LOCATION: Münzgrabenstraße 10\\, 8010 Graz
 SUMMARY:Brettspielsonntag
 DESCRIPTION:Brettspielsonntag
 CLASS:PUBLIC
