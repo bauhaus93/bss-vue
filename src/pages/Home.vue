@@ -16,7 +16,7 @@
         <hr />
       </div>
     </div>
-  
+
     <div class="row">
       <div class="col-sm">
         <a
@@ -30,7 +30,7 @@
       </div>
       <div class="col-sm">
         <a
-          href="https://maps.app.goo.gl/GD8aVdLDnVEk3N5NA"
+          href="https://maps.app.goo.gl/ZLXqLNUG5heuWXt88"
           target="_new"
           aria-label="Link zu Google Maps, der den Veranstaltungsort anzeigt."
           ><i class="bi bi-geo-alt-fill"></i
@@ -130,7 +130,7 @@ import CardGroup from "../components/CardGroup.vue";
 import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
-const next_event_date = new Date("2024-10-06");
+const next_event_date = new Date("2024-11-24");
 
 const future_event_dates = [date_formatter(next_event_date)];
 
