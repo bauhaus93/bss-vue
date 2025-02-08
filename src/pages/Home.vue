@@ -130,9 +130,13 @@ import CardGroup from "../components/CardGroup.vue";
 import { get_image_path, logo_path, logo_alt_text } from "../img.js";
 import { last_event } from "../events.js";
 
-const next_event_date = new Date("2025-01-12");
+const next_event_date = new Date("2025-02-23");
 
-const future_event_dates = [date_formatter(next_event_date)];
+const future_event_dates = [
+  date_formatter(next_event_date),
+  date_formatter(new Date("2025-03-16")),
+  date_formatter(new Date("2025-04-27")),
+];
 
 const card_contents = [
   {
