@@ -25,8 +25,10 @@
           download="brettspielsonntag.ics"
           ><i class="bi bi-calendar2-event"></i
         ></a>
-        <p class="fw-bold">{{ date_normal }}</p>
-        <p>13:00-20:00</p>
+        <p class="fw-bold">Aktuell in der Sommerpause</p>
+        <p class="fw-bold">Nächster Termin wird noch Angekündigt</p>
+        <!-- <p class="fw-bold">{{ date_normal }}</p>
+        <p>13:00-20:00</p>-->
       </div>
       <div class="col-sm">
         <a
@@ -132,9 +134,7 @@ import { last_event } from "../events.js";
 
 const next_event_date = new Date("2025-08-03");
 
-const future_event_dates = [
-  date_formatter(next_event_date),
-];
+const future_event_dates = [];
 
 const card_contents = [
   {
