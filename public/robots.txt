@@ -2,6 +2,30 @@
 User-Agent: GPTBot
 Disallow: /
 
+
+User-Agent: ChatGPT-User
+Disallow: /
+
+
+User-Agent: OAI-SearchBot
+Disallow: /
+
+
+User-Agent: ClaudeBot
+Disallow: /
+
+
+User-Agent: Claude-User
+Disallow: /
+
+
+User-Agent: Meta-ExternalAgent
+Disallow: /
+
+
+User-Agent: Google-Extended
+Disallow: /
+
 User-Agent: *
 Allow: /
 

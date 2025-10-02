@@ -19,16 +19,9 @@
 
     <div class="row">
       <div class="col-sm">
-        <a
-          :href="'data:text/calendar;base64,' + ics"
-          aria-label="Lade einen Kalendereintrag für den nächsten Brettspielsonntag herunter"
-          download="brettspielsonntag.ics"
-          ><i class="bi bi-calendar2-event"></i
-        ></a>
-        <p class="fw-bold">Aktuell in der Sommerpause</p>
-        <p class="fw-bold">Nächster Termin wird noch Angekündigt</p>
-        <!-- <p class="fw-bold">{{ date_normal }}</p>
-        <p>13:00-20:00</p>-->
+        <i class="bi bi-calendar2-event"></i>
+        <p class="fw-bold">NEU: Brettspielabend in gemütlicher Runde</p>
+        <p>Jeden Dienstag ab 18:00</p>
       </div>
       <div class="col-sm">
         <a
